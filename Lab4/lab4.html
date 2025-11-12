@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Explorer - Travel Blog Lab 4</title>
+    <link rel="stylesheet" href="style.css">
+    
+<style>
+
+body {
+    font-family: 'Georgia', serif; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*Navigation Bar Styling (Forest Green and Brown)*/
+nav {
+    background-color: #228b22; 
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/*Apply CSS Styling & Link State Styling*/
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    display: block;
+    border-radius: 4px;
+}
+
+/*Link State Colors*/
+nav ul li a:link {
+    background-color: #38761d;
+}
+
+nav ul li a:visited {
+    background-color: #6aa84f;
+}
+
+nav ul li a:hover {
+    background-color: #008080;
+    text-decoration: overline;
+}
+
+nav ul li a:active {
+    background-color: #5d4037;
+}
+
+/* Header and Footer*/
+header {
+    background-color: #87ceeb;
+    color: #1a472a;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Internal CSS Note override*/
+.note {
+    text-decoration: underline; 
+    color: #5d4037 !important;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #5d4037;
+    color: white;
+    margin-top: 20px;
+}
+
+/*Apply text decoration to headings and links */
+.style-underline, .style-overline, .style-linethrough {
+    color: #1e8449; 
+}
+
+/* Media Styling */
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the form using CSS */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fffaf0;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5d4037;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a9a9a9; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Global Explorer: The World Awaits</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#featured" class="nav-link">Featured Post</a></li>
+            <li><a href="#video-guide" class="nav-link">Video Guide</a></li>
+            <li><a href="#subscribe" class="nav-link">Subscribe</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="featured">
+            <article>
+                <h2>A Trip to the Swiss Alps</h2>
+                <p>Experience the breathtaking beauty of Switzerland. From the snow-capped peaks to 
+                    the crystal-clear lakes, it's a paradise for adventurers.</p>
+                <p>This is where your next journey begins. <span style="text-decoration: underline;">Read the full article now!</span></p>
+            </article>
+        </section>
+
+        <section id="video-guide">
+            <h2>Must-Watch Travel Video Guide</h2>
+            <article>
+                <figure>
+                    <video controls width="50%" height="100%" >
+                        <source src="FamilyGuy.mp4" type="video/mp4">
+                        
+                        <p>Your browser doesn't support HTML video. You can <a href="FamilyGuy.mp4">download the video</a> instead.</p>
+                    </video>
+                    <figcaption>Video: Scenic driving tour through the winding mountain roads of the Alps.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="subscribe">
+            <h2>Join Our Travel Community</h2>
+            <article>
+                <form id="travel-form" action="#" method="POST">
+                    <fieldset>
+                        <legend>Subscribe to Our Newsletter</legend>
+                        
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="enter your name" size="45"required>
+                        </div>
+
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+                        </div>
+
+                        <div class="form-group-inline">
+                            <label>Preferred Contact:</label>
+                            <label for="email-opt"><input type="radio" id="email-opt" name="contact-pref" value="email" required>
+                            Email Updates</label>
+                            <label for="social-opt"><input type="radio" id="social-opt" name="contact-pref" value="social">
+                            Social Media</label>
+                        </div>
+                        
+                        <div class="form-group-inline">
+
+                            <label>Travel Interests:</label>
+                            <br><label for="hiking"><input type="checkbox" id="hiking" name="interest" value="hiking">
+                            Hiking</label>
+                            <label for="city-breaks"><input type="checkbox" id="city-breaks" name="interest" value="city-breaks">
+                            City Breaks</label>
+                            <label for="beach"><input type="checkbox" id="beach" name="interest" value="beach">
+                            Beach Relaxing</label>
+                        </div>
+                        <br>
+                        <div>
+                            <center><button type="submit">Subscribe Now</button></center>
+                        </div>
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>About Global Explorer</h2>
+            <article>
+                <h3>Our Mission: <span class="line-through-text">Find Boring Trips</span></h3>
+                <p>We are dedicated to providing inspiring, well-researched, and budget-friendly travel guides.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Global Explorer. | <a href="#" class="footer-link">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
