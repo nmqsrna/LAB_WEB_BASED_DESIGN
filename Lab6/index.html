@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the General Knowledge Quiz!</h1>
+    </header>
+
+    <main>
+        <section id="quiz-section">
+            <div id="timer-container">
+                Time Left: <span id="time">15</span>s
+            </div>
+            <div id="question-container">
+                <h2 id="question">Question text goes here</h2>
+                <div id="answer-buttons" class="btn-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="feedback-section">
+            <p id="feedback-text"></p>
+        </section>
+
+        <div class="controls">
+            <button id="next-btn" class="btn hide">Next Question</button>
+        </div>
+    </main>
+
+    <footer>
+        <p id="score-container" class="hide">Your Final Score: <span id="score">0</span> / <span id="total-questions">0</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

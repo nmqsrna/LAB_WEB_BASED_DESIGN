@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <!--add basic styling-->
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .form-group{
+            margin-bottom: 10px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input{
+            padding: 8px;
+            width: 300px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h4>6.10 Client-side validation</h4>
+    <h5>6.10.1 Form Validation</h5>
+
+    <h2>Form Validation Example</h2>
+    <form name="myForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!--inlcude javascript \index{JavaScript}-->
+    <script src="form-validation.js"></script>
+</body>
+</html>
